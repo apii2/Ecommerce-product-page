@@ -7,8 +7,10 @@
   --color-dark-grayish-blue: hsl(219, 9%, 45%);
   --color-grayish-blue: hsl(220, 14%, 75%);
   --color-light-grayish-blue: hsl(223, 64%, 98%);
+
+  --font-kumbh-sans: 'Kumbh Sans', sans-serif;
 }
 
 body{
-  @apply bg-grayish-blue;
+  @apply font-kumbh-sans;
 }

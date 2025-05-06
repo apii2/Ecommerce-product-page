@@ -6,13 +6,15 @@ import { useState } from "react"
 export default function App() {
   const [isPopupOpen, setIsPopupOpen] = useState(false)
 
+  const [productAttri, setProductAttri] = useState({ selected: false, quantity: 0 })
+
   return (
-    <main className="px-40">
+    <main className="px-40 relative">
       <Header setIsPopupOpen={setIsPopupOpen}/>
       <hr className="text-grayish-blue/60 h-[2px] border-0 bg-grayish-blue/60"/>
-      {isPopupOpen && <CartPopup setIsPopupOpen={setIsPopupOpen}/>}
+      {isPopupOpen && <CartPopup setIsPopupOpen={setIsPopupOpen} productAttri={productAttri}/>}
 
-      <Main />
+      <Main productAttri={productAttri} setIsPopupOpen={setIsPopupOpen} setProductAttri={setProductAttri}/>
     </main>
   )
 }

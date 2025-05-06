@@ -4,7 +4,7 @@ import ProductImg3 from '../assets/images/image-product-3.jpg'
 import ProductImg4 from '../assets/images/image-product-4.jpg'
 import RightContainer from './RightContainer'
 
-export default function Main() {
+export default function Main({productAttri, setIsPopupOpen, setProductAttri}) {
   return (
     <section className='grid grid-cols-2 place-items-center gap-28 px-16 py-12'>
       <div className="space-y-6">
@@ -17,7 +17,7 @@ export default function Main() {
         </div>
       </div>
 
-      <RightContainer />
+      <RightContainer productAttri={productAttri} setIsPopupOpen={setIsPopupOpen} setProductAttri={setProductAttri}/>
     </section>
   )
 }

@@ -3,15 +3,17 @@ import { useState } from "react"
 export default function RightContainer({productAttri, setIsPopupOpen, setProductAttri}){
 
   function increQuantity(){
-    setProductAttri(prev=>({...prev, quantity: prev+1}))
+    setProductAttri(prev=>({...prev, quantity: prev.quantity+1}))
   }
   function decreQuantity(){
-    productAttri.quantity > 0 && setProductAttri(prev=>({...prev, quantity: prev-1}))
+    productAttri.quantity > 1 && setProductAttri(prev=>({...prev, quantity: prev.quantity-1}))
   }
 
   function handleClick(){
-    setProductAttri(prev=>({...prev, selected: true}))
-    setIsPopupOpen(true)
+    if(productAttri.quantity > 0){
+      setProductAttri(prev=>({...prev, selected: true}))
+      setIsPopupOpen(true)
+    }
   }
 
   return (

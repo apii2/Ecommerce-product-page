@@ -10,9 +10,9 @@ export default function App() {
 
   return (
     <main className="px-40 relative">
-      <Header setIsPopupOpen={setIsPopupOpen}/>
+      <Header setIsPopupOpen={setIsPopupOpen} productAttri={productAttri}/>
       <hr className="text-grayish-blue/60 h-[2px] border-0 bg-grayish-blue/60"/>
-      {isPopupOpen && <CartPopup setIsPopupOpen={setIsPopupOpen} productAttri={productAttri}/>}
+      {isPopupOpen && <CartPopup setIsPopupOpen={setIsPopupOpen} productAttri={productAttri} setProductAttri={setProductAttri}/>}
 
       <Main productAttri={productAttri} setIsPopupOpen={setIsPopupOpen} setProductAttri={setProductAttri}/>
     </main>

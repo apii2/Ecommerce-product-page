@@ -1,5 +1,3 @@
-import { useState } from "react"
-
 export default function RightContainer({productAttri, setIsPopupOpen, setProductAttri}){
 
   function increQuantity(){

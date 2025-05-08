@@ -35,13 +35,13 @@ export default function Main({productAttri, setIsPopupOpen, setProductAttri}) {
   }
 
   return (
-    <section className='grid grid-cols-2 place-items-center gap-28 px-16 py-12'>
-      <div className="space-y-6">
+    <section className='flex flex-col sm:grid grid-rows-1 grid-cols-2 place-items-center gap-5 md:gap-12 lg:gap-28 lg:px-16 sm:py-12'>
+      <div className="sm:space-y-6 w-full h-80 sm:h-auto">
         {imgArr.map((img, index)=>(
-          img.selected && <img key={index} src={img.src} alt="Image of shoes" className='rounded-xl' />
+          img.selected && <img key={index} src={img.src} alt="Image of shoes" className='sm:rounded-xl w-full h-full object-cover' />
         ))}
 
-        <div className="grid grid-cols-4 gap-6">
+        <div className="sm:grid grid-cols-4 gap-6 hidden">
           {imgArr.map((img, index)=>(
             <button key={index} 
               onClick={()=>changeImgSrc(index)}

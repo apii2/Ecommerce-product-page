@@ -9,7 +9,7 @@ export default function App() {
   const [productAttri, setProductAttri] = useState({ selected: false, quantity: 0 })
 
   return (
-    <main className="px-40 relative">
+    <main className="sm:px-5 md:px-10 lg:px-20 xl:px-40 relative">
       <Header setIsPopupOpen={setIsPopupOpen} productAttri={productAttri}/>
       <hr className="text-grayish-blue/60 h-[2px] border-0 bg-grayish-blue/60"/>
       {isPopupOpen && <CartPopup setIsPopupOpen={setIsPopupOpen} productAttri={productAttri} setProductAttri={setProductAttri}/>}

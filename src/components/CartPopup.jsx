@@ -7,7 +7,7 @@ export default function CartPopup(props){
   function useOutsideAlerter(ref){
     useEffect(()=>{
       function handleClickOutside(event){
-        if(ref.current && !ref.current.contains(event.target) && event.target !== document.querySelector('.btn-cart svg')){
+        if(ref.current && !ref.current.contains(event.target) && event.target !== document.querySelector('.btn-cart')){
           props.setIsPopupOpen(false)
         }
       }
@@ -36,7 +36,7 @@ export default function CartPopup(props){
   }
 
   return (
-    <section ref={popupRef} className="absolute right-0 -translate-x-20 -translate-y-5 w-80 h-45 rounded-lg bg-white shadow-xl">
+    <section ref={popupRef} className="absolute right-0 w-[92%] -translate-x-4 sm:-translate-x-6 lg:-translate-x-20 translate-y-3 sm:-translate-y-5 sm:w-80 h-45 rounded-lg bg-white shadow-xl">
       <h3 className="px-5 py-3 font-semibold text-very-dark-blue">Cart</h3>
       <hr className="h-[2px] bg-grayish-blue/30 text-grayish-blue/30 border-0"/>
       <div className={`px-5 py-3 text-dark-grayish-blue font-semibold text-sm ${!props.productAttri.selected && 'flex items-center justify-center h-32'}`}>

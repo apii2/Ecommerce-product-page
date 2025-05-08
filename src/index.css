@@ -14,14 +14,3 @@
 body{
   @apply font-kumbh-sans;
 }
-
-/* .img-container::before{
-  content: ' ';
-  @apply absolute top-0 left-0 w-full h-full hover:bg-black/40 rounded-xl;
-}
-
-.img-container:hover{
-  & ::before{
-    @apply bg-black/40;
-  }
-} */

@@ -14,3 +14,17 @@
 body{
   @apply font-kumbh-sans;
 }
+
+/* Swiper styles */
+.swiper-wrapper{
+  height: auto !important;
+}
+
+.swiper-button-prev::after, .swiper-button-next::after{
+  display: none;
+}
+
+.swiper-button-prev, .swiper-button-next{
+  width: 2.5rem !important;
+  height: 2.5rem !important;
+}

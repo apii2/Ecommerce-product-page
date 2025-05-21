@@ -8,7 +8,7 @@ export default function CartPopup(props){
     useEffect(()=>{
       function handleClickOutside(event){
         if(ref.current && !ref.current.contains(event.target) && event.target !== document.querySelector('.btn-cart')){
-          props.setIsPopupOpen(false)
+          props.setIsCartOpen(false)
         }
       }
 
@@ -32,7 +32,7 @@ export default function CartPopup(props){
 
   function handleClick(){
     props.setProductAttri(prev=>({...prev, selected: false, quantity: 0}))
-    props.setIsPopupOpen(false)
+    props.setIsCartOpen(false)
   }
 
   return (

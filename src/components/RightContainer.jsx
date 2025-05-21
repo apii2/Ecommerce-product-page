@@ -1,4 +1,4 @@
-export default function RightContainer({productAttri, setIsPopupOpen, setProductAttri}){
+export default function RightContainer({productAttri, setIsCartOpen, setProductAttri}){
 
   function increQuantity(){
     setProductAttri(prev=>({...prev, quantity: prev.quantity+1}))
@@ -10,7 +10,7 @@ export default function RightContainer({productAttri, setIsPopupOpen, setProduct
   function handleClick(){
     if(productAttri.quantity > 0){
       setProductAttri(prev=>({...prev, selected: true}))
-      setIsPopupOpen(true)
+      setIsCartOpen(true)
     }
   }
 

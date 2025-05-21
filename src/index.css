@@ -28,3 +28,13 @@ body{
   width: 2.5rem !important;
   height: 2.5rem !important;
 }
+
+.lightbox-container .swiper-button-prev{
+  left: 0 !important;
+  transform: translateX(-1.25rem);
+}
+
+.lightbox-container .swiper-button-next{
+  right: 0 !important;
+  transform: translateX(1.25rem);
+}
